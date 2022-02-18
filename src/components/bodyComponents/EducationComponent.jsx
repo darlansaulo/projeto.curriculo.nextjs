@@ -14,10 +14,11 @@ export default function EducationComponent(props) {
 
                 <FontAwesomeIcon className='ring-1 ring-[#17294F] ring-offset-4 ring-offset-[#e3e7fc]' icon={faGraduationCap} /> Educação
             </h1>
-            <p>
-                {props.titulo}
-                {props.Subtitulo}
-            </p>
+            <ul className="text-xs list-disc pl-[15.36px] pb-3 border-l-2 ml-1.5">
+                <li className="font-black text-lg pt-3"> <span className='text-[14px]'> {props.tituloEduca} </span> </li>
+                <li className="underline list-none pb-6 list-inside"> {props.subTituloEduca_1} </li>
+                <li className='list-inside'> {props.subTituloEduca_2} </li>
+            </ul>
         </div>
     )
 }

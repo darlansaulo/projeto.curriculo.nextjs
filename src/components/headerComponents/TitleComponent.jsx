@@ -8,6 +8,7 @@ export default function TitleComponent(props) {
                     font-black
                     text-[#17294F]
                     
+                    
                 `}>
                     {props.children}
                 </h1>

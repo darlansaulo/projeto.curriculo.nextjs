@@ -1,5 +1,5 @@
 import PhotoComponent from "./PhotoComponent";
-import ContactNetworkComponent from "./ContactNetworkComponent";
+import ProfileComponent from "./ProfileComponent";
 import TitleComponent from "./TitleComponent";
 
 
@@ -12,7 +12,7 @@ export default function HeaderComponent(props) {
             `}>
             <TitleComponent> {props.titulo} </TitleComponent>
             <PhotoComponent> </PhotoComponent>
-            <ContactNetworkComponent {...props}>   </ContactNetworkComponent>
+            <ProfileComponent {...props}/>
             
         </div>
     )

@@ -27,7 +27,6 @@
   src: url('../../public/assets/fonts/OpenSans-Light.ttf');
 }
 
-
 html,
 body {
   padding: 0;
@@ -42,3 +41,4 @@ a {
 * {
   box-sizing: border-box;
 }
+

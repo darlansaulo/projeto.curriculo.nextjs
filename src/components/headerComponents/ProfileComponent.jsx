@@ -4,11 +4,12 @@ export default function ProfileComponent(props) {
             
         `}>
             <h1 className={`
-                text-[0.667rem]
+                text-xs
                 text-black
+                pt-4
                 
             `}>
-                {props.titulo}
+                {props.tituloProfile}
             </h1>
         </div>
     )

@@ -1,0 +1,121 @@
+@media (max-width:700px) {
+    .content {
+        display: block
+        
+    }
+}
+
+.content {
+    display: flex-row;
+    list-style: none;
+}
+
+.content .contentLi {
+    margin: 10px;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px;
+    cursor: pointer;
+    position: relative;
+    background-color: #fff;
+}
+
+.content .contentLi .icons {
+    transition: all 0.3s linear;
+    font-size: 70px;
+}
+
+.content .contentLi::after {
+    content: "";
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    border-radius: 0px;
+    background-color: red;
+    opacity: 0;
+    z-index: -1;
+    color: #fff;
+    transition: all 0.3s linear
+}
+
+.content .contentLi:hover .icons {
+    font-size: 90px;
+}
+
+.content .contentLi:nth-child(1):hover {
+    color: #34af23;
+}
+
+.content .contentLi:nth-child(2):hover {
+    color: #171515;
+    
+}
+
+.content .contentLi:nth-child(3):hover {
+    color: #007bb6;
+    
+}
+
+.content .contentLi:nth-child(4):hover {
+    color: #db4a39;
+    
+}
+
+.content .contentLi:hover::after {
+    opacity: 1;
+    transform: scale(0.8)
+}
+
+.content .contentLi::after {
+    content: "";
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    border-radius: 3px;
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.3s linear
+}
+
+.content .contentLi:nth-child(1) {
+    border: 2px solid #17294F;
+    color: #17294F
+}
+
+.content .contentLi:nth-child(1)::after {
+    background-color: #17294F;
+    color: #17294F
+}
+
+.content .contentLi:nth-child(2) {
+    border: 2px solid #17294F;
+    color: #17294F
+}
+
+.content .contentLi:nth-child(2)::after {
+    background-color: #17294F;
+    color: #17294F
+}
+
+.content .contentLi:nth-child(3) {
+    border: 2px solid #17294F;
+    color: #17294F
+}
+
+.content .contentLi:nth-child(3)::after {
+    background-color: #17294F;
+    color: #17294F
+}
+
+.content .contentLi:nth-child(4) {
+    border: 2px solid #17294F;
+    color: #17294F;
+}
+
+.content .contentLi:nth-child(4)::after {
+    background-color: #17294F;
+    color: #17294F;
+}

@@ -17,7 +17,7 @@ export default function FooterComponent() {
                 
          
             `}>
-                Desenvolvido por Darlan <FontAwesomeIcon className="border-2 rounded-full border-[#17294F]" icon={faCodeCommit}/>
+                Desenvolvido por Darlan <FontAwesomeIcon className="border-[#17294F]" icon={faCodeCommit}/>
             </p>
         </div>
     )
