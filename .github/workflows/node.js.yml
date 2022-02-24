@@ -1,36 +1,38 @@
-name: GitHub Pages Deploy
+name: Deploy to GitHub Pages
+
 
 on:
   push:
     branches: [main]
 
+
 jobs:
   build:
-    runs-on: windows-latest
-    
+    runs-on: ubuntu-latest
+
+
     strategy:
       matrix:
         node-version: [14.x]
 
+
     steps:
-      - uses: actions/checkout@v2.3.1
+      - name: Get files
+        uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-
-      - name: Installing my packages
+      - name: Install packages
         run: npm ci
-
-      - name: Build my App
-        run: npm run build 
-        
-      - name: Export my App
-      - run: npm run export
-
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.0
+      - name: Build project
+        run: npm run build
+      - name: Export static files
+        run: npm run export
+      - name: Add .nojekyll file
+        run: touch ./out/.nojekyll
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: out # The folder the action should deploy.
+          branch: gh-pages
+          folder: out
