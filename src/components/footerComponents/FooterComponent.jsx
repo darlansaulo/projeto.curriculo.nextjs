@@ -6,11 +6,11 @@ export default function FooterComponent() {
     return (
         <div className={`
             bg-white
-            flex flex-row justify-between pr-5 pb-3 pl-3 grid-in-FooterComponent
-            
+            flex flex-row justify-end pr-5 pb-3 pl-3 grid-in-FooterComponent
+            mobile:justify-center
+            mobile:p-0
             
         `}>
-            <SearchComponent/>
             <p className={`
                 text-xs
                 self-end
